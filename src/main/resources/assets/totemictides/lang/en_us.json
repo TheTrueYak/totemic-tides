@@ -1,0 +1,35 @@
+{
+  "item.totemictides.totem_of_creeping": "Totem of Creeping",
+  "item.totemictides.totem_of_blazing": "Totem of Blazing",
+  "item.totemictides.totem_of_inking": "Totem of Inking",
+  "item.totemictides.totem_of_breezing": "Totem of Breezing",
+
+  "item.totemictides.totem_of_regenerating": "Totem of Regenerating",
+  "item.totemictides.totem_of_evoking": "Totem of Evoking",
+  "item.totemictides.totem_of_shulking": "Totem of Shulking",
+
+
+  "item.totemictides.elder_guardian_spike": "Elder Guardian Spike",
+  "item.totemictides.bottled_vex": "Bottled Vex",
+
+
+
+
+
+  "tooltip.totemictides.shift": "Hold [Shift] to read more",
+  "tooltip.totemictides.shift_down": "Hold [Shift] to read more",
+  "tooltip.totemictides.can_infuse": "Can be infused into a Totem of Undying",
+  "tooltip.totemictides.on_hit": "On Hit:",
+  "tooltip.totemictides.when_thrown": "When Thrown:",
+
+  "effect.totemictides.atonement": "Atonement",
+  "effect.totemictides.atonement.desc": "yea no totems for you bud",
+  "effect.totemictides.grace": "Grace",
+  "effect.totemictides.grace.desc": "Prevents high damage attacks from being lethal",
+  "effect.totemictides.blazing_empowerment": "Blazing Empowerment",
+  "effect.totemictides.blazing_empowerment.desc": "Strengthens you with flame",
+  "effect.totemictides.radiance": "Radiance",
+  "effect.totemictides.radiance.desc": "damage dropoff lol, well of radiance time!"
+
+
+}

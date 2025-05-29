@@ -1,0 +1,47 @@
+{
+	"schemaVersion": 1,
+	"id": "totemictides",
+	"version": "${version}",
+	"name": "Totemic Tides",
+	"description": "let your fear of death wash over you and throw you against the sand",
+	"authors": [
+		"TheTrueYak"
+	],
+	"contact": {
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/totemictides/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.yak.totemictides.TotemicTides"
+		],
+		"client": [
+			"net.yak.totemictides.TotemicTidesClient"
+		],
+		"cardinal-components-entity": [
+			"net.yak.totemictides.init.TotemicEntityComponents"
+		]
+	},
+	"mixins": [
+		"totemictides.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"custom": {
+		"cardinal-components": [
+			"totemictides:blazing",
+			"totemictides:inked",
+			"totemictides:breezing",
+			"totemictides:rematching"
+		]
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
