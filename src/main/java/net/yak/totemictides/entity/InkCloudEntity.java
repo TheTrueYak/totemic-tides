@@ -8,7 +8,9 @@ import net.minecraft.entity.data.DataTracker;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.util.math.Box;
 import net.minecraft.world.World;
+import net.yak.totemictides.init.TotemicEntityComponents;
 import net.yak.totemictides.init.TotemicEntityTypes;
 import org.jetbrains.annotations.Nullable;
 
@@ -61,6 +63,12 @@ public class InkCloudEntity extends Entity implements Ownable {
         if (this.getWorld() instanceof ServerWorld serverWorld) {
             for (int i = 0; i < 5; i++) {
                 serverWorld.addParticle(ParticleTypes.SQUID_INK, this.getX() + this.getRandom().nextBetween((int) this.getX() - 5, (int) this.getX() + 5), this.getY() + this.getRandom().nextBetween((int) this.getX() - 2, (int) this.getX() + 2), this.getZ() + this.getRandom().nextBetween((int) this.getX() - 5, (int) this.getX() + 5), 0.0, 0.0, 0.0);
+            }
+            if (age % 5 == 0) {
+                Box box = this.getBoundingBox();
+                for (LivingEntity livingEntity : serverWorld.getNonSpectatingEntities(LivingEntity.class, box)) {
+                    TotemicEntityComponents.INKED.get(livingEntity).setInkedTicks(40);
+                }
             }
         }
     }

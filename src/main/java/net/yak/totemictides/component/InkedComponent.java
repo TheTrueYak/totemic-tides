@@ -66,10 +66,15 @@ public class InkedComponent implements AutoSyncedComponent, CommonTickingCompone
     }
 
     public void setInkedTicks(int ticks) {
-        inkedTicks = ticks;
-        if (livingEntity instanceof PlayerEntity) {
-            splotchCount = 3 + livingEntity.getRandom().nextInt(5); // 3-7 splotches
-            splotchSeed = livingEntity.getRandom().nextInt(100);
+        if (inkedTicks == 0 || ticks == 0) {
+            inkedTicks = ticks;
+            if (livingEntity.isPlayer() && ticks != 0) {
+                splotchCount = 3 + livingEntity.getRandom().nextInt(5); // 3-7 splotches
+                splotchSeed = livingEntity.getRandom().nextInt(100);
+            }
+        }
+        else {
+            inkedTicks += ticks;
         }
         sync();
     }
